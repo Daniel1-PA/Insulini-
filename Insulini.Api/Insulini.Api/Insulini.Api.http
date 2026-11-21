@@ -1,0 +1,6 @@
+@Insulini.Api_HostAddress = http://localhost:5187
+
+GET {{Insulini.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
