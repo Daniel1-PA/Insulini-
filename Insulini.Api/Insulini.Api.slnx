@@ -1,3 +1,7 @@
 <Solution>
+  <Folder Name="/tests/">
+    <Project Path="tests/Insulini.IntegrationTests/Insulini.IntegrationTests.csproj" />
+    <Project Path="tests/Insulini.UnitTests/Insulini.UnitTests.csproj" />
+  </Folder>
   <Project Path="Insulini.Api/Insulini.Api.csproj" />
 </Solution>
