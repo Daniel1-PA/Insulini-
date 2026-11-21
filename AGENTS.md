@@ -2,6 +2,8 @@
 
 Es una aplicación diseñada para ayudar a las personas con diabetes a llevar un mejor control de su tratamiento y facilitar el seguimiento por parte de sus médicos y cuidadores. La idea principal es que toda la información importante del paciente se encuentre en un solo lugar, evitando que se pierda entre notas, mensajes o recordatorios.
 
+La aplicacion simulara la conexión de dispositivos inteligentes como Glucometro y Bascula que para la simulación serán eviados por el Backend.
+
 Las features concretas las puedes encontrar en el archivo README.md
 
 ## Tecnologias
@@ -76,5 +78,5 @@ En la carpeta Data/ va el dbcontext, las migraciones y las configuraciones de lo
 
 
 #### Frontend
-
+PWA para dispositivos moviles (Paciente y cuidador) y Web para medico.
 Usa vertical slice architecture
