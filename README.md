@@ -39,12 +39,13 @@ Redactar un listado de features en listado sin hablar de tecnisismos, unicamente
 - Los pacientes podran iniciar sesion con su correo y contraseña o con cuenta google
 - El paciente podra registrar su actividad fisica y consultar listados de esta
 - El cuidador y el medico podra observar el seguimiento de la receta de medica.
-- El medico tendría una actualización de toda la información que se concentre de su paciente-
+- El medico tendría una actualización de toda la información que se concentre de su paciente.
 - El paciente tendra recordatorios, reportar sintomas y dar seguimiento a sus indicadores de salud, tiene total acceso a su tratamiento.
 - El cuidador o familiar puede supervisar a la par el cumplimiento de las indicaciones brindadas por el medico.
 - El paciente y el cuidador pueden registrar el avance del tratamiento y su cumplimiento.
 - La aplicacion podra realizar un monitoreo continuo de distintos indicadores de salud que en su mayoria provendran de dispositivos inteligentes (Seran datos simulados para el demo)
-- 
+- La aplicación tendra funciones accesibles como cambio del tamaño de letra entre otras que garanticen que adultos mayores usen la aplicacion.
+- La aplicacion realizara notificaciones como recordatorios de las instrucciones del doctor, o alguna cita programada.
 
 
 ...
