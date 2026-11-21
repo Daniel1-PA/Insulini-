@@ -33,19 +33,78 @@ En programas de seguimiento para pacientes con diabetes que necesitan un control
 
 
 
+## Demo
+
+Después de ejecutar `docker compose up --build -d`:
+
+- Aplicación: http://localhost:5173
+- API/OpenAPI: http://localhost:8000/openapi/v1.json
+- PostgreSQL: `localhost:5433`
+
+Las tres cuentas demo usan la contraseña `Insulini123!`:
+
+| Rol | Correo |
+| --- | --- |
+| Paciente | `paciente@insulini.mx` |
+| Cuidador | `cuidador@insulini.mx` |
+| Médico | `medico@insulini.mx` |
+
+El código de invitación demo para vincular un paciente con el médico es `DR-4821`.
+
 ## Features
 
-Redactar un listado de features en listado sin hablar de tecnisismos, unicamente la feature, ejemplo:
-- Los pacientes podran iniciar sesion con su correo y contraseña o con cuenta google
-- El paciente podra registrar su actividad fisica y consultar listados de esta
-- El cuidador y el medico podra observar el seguimiento de la receta de medica.
-- El medico tendría una actualización de toda la información que se concentre de su paciente.
-- El paciente tendra recordatorios, reportar sintomas y dar seguimiento a sus indicadores de salud, tiene total acceso a su tratamiento.
-- El cuidador o familiar puede supervisar a la par el cumplimiento de las indicaciones brindadas por el medico.
-- El paciente y el cuidador pueden registrar el avance del tratamiento y su cumplimiento.
-- La aplicacion podra realizar un monitoreo continuo de distintos indicadores de salud que en su mayoria provendran de dispositivos inteligentes (Seran datos simulados para el demo)
-- La aplicación tendra funciones accesibles como cambio del tamaño de letra entre otras que garanticen que adultos mayores usen la aplicacion.
-- La aplicacion realizara notificaciones como recordatorios de las instrucciones del doctor, o alguna cita programada.
+### Paciente
 
+- Inicio de sesión y registro con selección de rol.
+- Consulta de glucosa actual e historial enviado por un glucómetro simulado.
+- Consulta de tratamiento, horarios e indicaciones del médico.
+- Registro del cumplimiento de cada toma.
+- Registro de actividad física, intensidad y duración.
+- Reporte e historial de síntomas.
+- Consulta de indicadores y próximas citas.
+- Centro de notificaciones para medicamentos, alertas, cambios de receta y citas.
+- Ajustes de tamaño de letra, alto contraste, modo simple, lectura, vibración y dictado.
 
-...
+### Cuidador o familiar
+
+- Supervisión del paciente vinculado y sus indicadores principales.
+- Alertas por dosis no registradas.
+- Seguimiento semanal de la receta y adherencia.
+- Registro de tomas, mediciones y notas como cuidador.
+- Bitácora compartida de actividad, síntomas y cumplimiento.
+
+### Médico
+
+- Lista de pacientes priorizada por riesgo con búsqueda y resumen de consulta.
+- Expediente consolidado con glucosa, tiempo en rango, HbA1c, adherencia, síntomas y actividad.
+- Edición de medicamentos, dosis, frecuencia, horarios e indicaciones.
+- Notificación automática al paciente cuando cambia la receta.
+- Agenda de citas presenciales o por videollamada.
+- Centro de alertas de pacientes que requieren atención.
+
+## Desarrollo
+
+Backend:
+
+```bash
+dotnet run --project Insulini.Api/Insulini.Api
+```
+
+Frontend:
+
+```bash
+cd Insulini.App
+npm ci
+npm run dev
+```
+
+Pruebas y builds:
+
+```bash
+dotnet test Insulini.Api/tests/Insulini.UnitTests
+dotnet test Insulini.Api/tests/Insulini.IntegrationTests
+dotnet build Insulini.Api/Insulini.Api.slnx
+cd Insulini.App && npm run build
+```
+
+La configuración incluida es de demostración. Antes de producción se debe reemplazar la llave JWT y las credenciales de PostgreSQL.
